@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/burger.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>برگر لند</title>
+  </head>
+
+  
+  <body>
+
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav__wrapper">
+            <div class="menu-box">
+              <a id="openBasket" href="#" class="menu-box__link">سبدخرید</a>
+              <a id="openregister" href="#" class="menu-box__link">ورود</a>
+            </div>
+            <div class="menu-humberger">
+              <span
+                class="menu-humberger__line menu-humberger__line--open"
+              ></span>
+            </div>
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">خانه</a>
+              </li>
+              <li class="menu__item">
+                <a href="#Products" class="menu__link">سفارش</a>
+              </li>
+              <li class="menu__item">
+                <a href="#Comments" class="menu__link">نظرات مشتری ها</a>
+              </li>
+              <li class="menu__item">
+                <a href="#connections" class="menu__link">تماس با ما</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- menu for mobile -->
+          <div class="nav-menu">
+            <svg
+              class="nav-menu__close"
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <path
+                d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"
+              />
+            </svg>
+            <h2 class="nav-menu__title">برگر لند</h2>
+            <ul class="menu-mobile">
+              <li class="menu-mobile__item">
+                <a href="#" class="menu-mobile__link">خانه</a>
+              </li>
+              <li class="menu-mobile__item">
+                <a href="#Products" class="menu-mobile__link">سفارش</a>
+              </li>
+              <li class="menu-mobile__item">
+                <a href="#Comments" class="menu-mobile__link">نظرات مشتری ها</a>
+              </li>
+              <li class="menu-mobile__item">
+                <a href="#connections" class="menu-mobile__link">تماس با ما</a>
+              </li>
+            </ul>
+            <div class="login-menu">
+              <a id="openCartMobile" href="#" class="login-menu__link"
+                >سبدخرید</a
+              >
+              <a id="openRegisterMobile" href="#" class="login-menu__link"
+                >ورود</a
+              >
+            </div>
+          </div>
+
+          <a href="#" class="app-logo">
+            <img class="app-logo__img" src="/images/svg/logo.svg" alt="" />
+          </a>
+        </nav>
+
+        <div class="cart">
+          <div>
+            <svg
+              class="cart__close"
+              fill="#fff"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <path
+                d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"
+              />
+            </svg>
+            <h2 class="cart__title">سبدخرید</h2>
+            <div class="cart__box"></div>
+          </div>
+
+          <div class="cart-payment">
+            <div class="cart-payment__wrapper">
+              <span class="cart-payment__title-price">مجموع قیمت : </span>
+              <span class="cart-payment__price">0</span>
+              <span class="cart-payment__toman">تومان</span>
+            </div>
+            <a class="cart-payment__title" href="#">پرداخت</a>
+          </div>
+        </div>
+
+        <!-- Notification when adding foods to the cart -->
+        <div class="Notification"></div>
+
+        <div class="register">
+          <svg
+            class="register__close"
+            fill="#000"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24px"
+            height="24px"
+          >
+            <path
+              d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"
+            />
+          </svg>
+          <h2 class="register__title">برگر لند</h2>
+          <h3 class="register__Guide">ورود / ثبت نام</h3>
+          <form class="register-form">
+            <label class="register-form__title" for=""
+              >شماره موبایل خود را وارد کنید :</label
+            >
+            <input
+              pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+              dir="ltr"
+              class="register-form__input"
+              type="tel"
+              autofocus
+            />
+            <button type="submit" class="register__btn">
+              <a href="#" class="register__link">ورود</a>
+            </button>
+          </form>
+        </div>
+
+        <!--shadow during open cart and open login -->
+        <div class="shadow"></div>
+
+        <div class="header__bio">
+          <h1 class="header__title">برگر لند</h1>
+          <div class="header__wrapper-bio">
+            <p class="header__about">
+              فست فود زنجیره ای برگرلند <br />
+              ۲۳شعبه فعال در کشور
+            </p>
+          </div>
+          <a href="#Products" class="header__link"> &#8594; بزن بریم</a>
+        </div>
+      </div>
+      <svg
+        class="header__arrow"
+        xmlns="http://www.w3.org/2000/svg"
+        width="62.647"
+        height="54.042"
+        viewBox="0 0 62.647 54.042"
+      >
+        <g
+          id="Group_1385"
+          data-name="Group 1385"
+          transform="translate(-917.564 -927.933)"
+        >
+          <g
+            id="_130882"
+            data-name="130882"
+            transform="translate(917.564 962.427) rotate(-90)"
+          >
+            <path
+              id="Chevron_Right"
+              d="M.916,33.56,29.088,61.723a3.163,3.163,0,0,0,4.478-4.469L7.629,31.325,33.563,5.4A3.164,3.164,0,0,0,29.085.925L.913,29.088A3.192,3.192,0,0,0,.916,33.56Z"
+              fill="#fa0"
+            />
+          </g>
+          <g
+            id="_130882-2"
+            data-name="130882"
+            transform="translate(925 981.975) rotate(-90)"
+          >
+            <path
+              id="Chevron_Right-2"
+              data-name="Chevron_Right"
+              d="M.7,25.593,22.183,47.071A2.412,2.412,0,0,0,25.6,43.663L5.818,23.889,25.6,4.116A2.413,2.413,0,1,0,22.181.705L.7,22.183A2.434,2.434,0,0,0,.7,25.593Z"
+              fill="#fa0"
+            />
+          </g>
+        </g>
+      </svg>
+      <img class="header__khash" src="/images/khash.png" alt="" />
+    </header>
+
+
+    <main>
+      <section class="Services">
+        <div class="container">
+          <h2 class="Services__title">چی میخوای بخوری ؟؟</h2>
+          <img class="Services__boder" src="/images/svg/Brush_1_.svg" alt="" />
+          <p class="Services__bio">
+            خوشمزه ترین غذای ما را امتحان کنید و تحویل آن معمولا چند دقیقه طول
+            می کشد!
+          </p>
+          <div class="Services-box">
+            <div class="services-box__food">
+              <img
+                class="services-box-img"
+                src="/images/svg/pizza.svg"
+                alt=""
+              />
+              <p class="services-box__name">پیتزا</p>
+            </div>
+            <div class="services-box__food">
+              <img
+                class="services-box-img"
+                src="/images/svg/burger.svg"
+                alt=""
+              />
+              <p class="services-box__name">برگر</p>
+            </div>
+            <div class="services-box__food">
+              <img
+                class="services-box-img"
+                src="/images/svg/putato.svg"
+                alt=""
+              />
+              <p class="services-box__name">سیب زمینی</p>
+            </div>
+            <div class="services-box__food">
+              <img
+                class="services-box-img"
+                src="/images/chicken barbecue2.png"
+                alt=""
+              />
+              <p class="services-box__name">سوخاری</p>
+            </div>
+            <div class="services-box__food">
+              <img
+                class="services-box-img"
+                src="/images/svg/spaghetti.svg"
+                alt=""
+              />
+              <p class="services-box__name">ماکارونی</p>
+            </div>
+            <div class="services-box__food">
+              <img
+                class="services-box-img"
+                src="/images/svg/Sandwich.svg"
+                alt=""
+              />
+              <p class="services-box__name">ساندویچ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Delivery">
+        <img class="Delivery__Scratch-top" src="/images/top.png" alt="" />
+        <div class="container">
+          <div class="Delivery__wrapper">
+            <div class="Waiter">
+              <img class="Waiter__img" src="/images/Waiter.png" alt="" />
+            </div>
+            <div class="Delivery__bio">
+              <p class="Delivery__text">
+                ما تضمین میدیم <br />۳۰ دقیقه ای تحویل بدیم
+              </p>
+            </div>
+          </div>
+        </div>
+        <img class="Delivery__Scratch-down" src="/images/down.png" alt="" />
+      </section>
+
+      <section id="Products" class="Products">
+        <div class="container">
+          <h2 class="Products__title">غذاهای ما</h2>
+          <img class="Products__border" src="/images/svg/Brush_1_.svg" alt="" />
+          <p class="Products__text">
+            خوشمزه ترین غذای ما را امتحان کنید و تحویل آن معمولا چند دقیقه طول
+            می کشد!
+          </p>
+          <div class="Products-box"></div>
+          <div class="Products__paginate"></div>
+        </div>
+      </section>
+
+      <section class="Discount">
+        <img class="Discount__Scratch-top" src="/images/top.png" alt="" />
+        <div class="container">
+          <div class="Notifications">
+            <h2 class="Notifications__title">تخفیف های شگفت انگیز ما</h2>
+            <p class="Notifications__text-one">
+              40% تخفیف برای تمامی پیتزاهای درجه یک
+            </p>
+            <p class="Notifications__text-two">تا شروع تخفیف :</p>
+
+            <div class="Notifications__wrapper">
+              <div class="Notifications__times">
+                <div class="Notifications__date" id="second">00</div>
+                <span class="Notifications__time">ثانیه</span>
+              </div>
+              <div class="Notifications__times">
+                <div class="Notifications__date" id="minute">00</div>
+                <span class="Notifications__time">دقیقه</span>
+              </div>
+              <div class="Notifications__times">
+                <div class="Notifications__date" id="hour">00</div>
+                <span class="Notifications__time">ساعت</span>
+              </div>
+
+              <div class="Notifications__times">
+                <div class="Notifications__date" id="day">00</div>
+                <span class="Notifications__time"> روز</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="Discount__Scratch-down" src="/images/down.png" alt="" />
+      </section>
+
+      <section id="Comments" class="Comments">
+        <div class="container">
+          <h2 class="Comments__title">نظرات مشتری ها</h2>
+          <img class="Comments__border" src="/images/svg/Brush_1_.svg" alt="" />
+          <p class="Comments__text">
+            خوشمزه ترین غذای ما را امتحان کنید و تحویل آن معمولا چند دقیقه طول
+            می کشد!
+          </p>
+
+          <div class="Comment">
+            <div class="Comment__cover">
+              <div class="Comment__large"></div>
+              <div class="Comment__small"></div>
+            </div>
+            <div class="Comment__Bio">
+              <img class="Comment__img" src="/images/vir.png" alt="" />
+
+              <p class="Comment__text">
+                برگرهاشون حرف نداشت و خیلی خیلی خوشمزه بود. پیتزاها هم خوشمزه
+                بود و منو یاد پیتزاهایی که تو انگلیس می خوردم انداخت. منم اولش
+                این سبک رو خیلی دوست نداشتم ولی الان خیلی دوست دارم و به نظرم
+                بینظیر بود.
+              </p>
+              <h4 class="Comment__Name">مستر تیستر</h4>
+              <h5 class="Comment__job">کارافرین برتر ملی</h5>
+              <div class="Comment__dots">
+                <span
+                  onclick="currentSlide(0)"
+                  class="Comment__dot Comment__dot--active"
+                ></span>
+                <span onclick="currentSlide(1)" class="Comment__dot"></span>
+                <span onclick="currentSlide(2)" class="Comment__dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <img class="advantages__Scratch" src="/images/top.png" alt="" />
+        <div class="container">
+          <div class="Attributes">
+            <div class="Attributes__box">
+              <img class="Attributes__img" src="/images/svg/time.svg" alt="" />
+              <h4 class="Attributes__title">تحویل ۳۰ دقیقه ای</h4>
+              <span class="Attributes__border"></span>
+              <p class="Attributes__text">
+                هر چیزی که سفارش دهید به سرعت درب منزل تحویل داده میشه.
+              </p>
+            </div>
+            <div class="Attributes__box">
+              <img
+                class="Attributes__img"
+                src="/images/svg/delivery.svg"
+                alt=""
+              />
+              <h4 class="Attributes__title">ارسال رایگان در سفارش اول</h4>
+              <span class="Attributes__border"></span>
+              <p class="Attributes__text">
+                اگه اولین باره میخوای غذا سفارش بدی هزینه پیک رو مهمون ما باش
+              </p>
+            </div>
+            <div class="Attributes__box">
+              <img class="Attributes__img" src="/images/svg/pla.svg" alt="" />
+              <h4 class="Attributes__title">بسته بندی جذاب</h4>
+              <span class="Attributes__border"></span>
+              <p class="Attributes__text">
+                ما واسه بسته بندی از ظروف گیاهی استفاده میکنیم هم جذابه هم دوس
+                دار طبیعت
+              </p>
+            </div>
+            <div class="Attributes__box">
+              <img class="Attributes__img" src="/images/svg/bur.svg" alt="" />
+              <h4 class="Attributes__title">تضمین بهترین کیفیت</h4>
+              <span class="Attributes__border"></span>
+              <p class="Attributes__text">
+                ما فقط از بهترین مواد برای طبخ غذای تازه خوشمزه برای شما استفاده
+                می کنیم.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="connections" class="connections">
+        <div class="map"></div>
+
+        <div class="address">
+          <div class="address__wrapper-one">
+            <svg
+              class="h-8 w-8 text-red-500 address__phone"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fa0"
+              stroke-width="1.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            <span class="address__tel">تلفن رزرو : 08338431730</span>
+          </div>
+          <div class="address__wrapper-two">
+            <img class="address__clock" src="/images/svg/clock.svg" alt="" />
+            <span class="address__days"
+              >هر روز هفته از ساعت ۱۱ صبح الی ۱۲ شب</span
+            >
+          </div>
+          <div class="address__wrapper-three">
+            <img
+              class="address__location"
+              src="/images/svg/location.svg"
+              alt=""
+            />
+            <span class="address__city"
+              >کرمانشاه،گلستان،بلوار وحدت،خ. صفر چغازردی</span
+            >
+          </div>
+          <div class="address__wrapper">
+            <a class="address__links" href=""
+              ><img class="address__link" src="/images/svg/facebook.svg" alt=""
+            /></a>
+            <a class="address__links" href=""
+              ><img class="address__link" src="/images/svg/twitter.svg" alt=""
+            /></a>
+            <a class="address__links" href=""
+              ><img
+                class="address__link"
+                src="/images/svg/instagrem.svg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="store">
+            <img class="store__logo" src="/images/svg/logo-footer.svg" alt="" />
+            <div class="store__wrapper-one">
+              <img class="store__nemad" src="/images/nemad.png" alt="" />
+              <img class="store__nemad" src="/images/rezi.png" alt="" />
+              <img
+                class="store__nemad"
+                src="/images/نماد-اطمینان-1_120x120.jpg"
+                alt=""
+              />
+            </div>
+            <h5 class="store__news-title">عضویت در خبرنامه</h5>
+            <div class="store__wrapper-two">
+              <img class="store__icons" src="/images/svg/send.svg" alt="" />
+              <input
+                class="store__input"
+                type="text"
+                placeholder="ایمیل یا شماره تلفن را  وارد کنید"
+              />
+              <svg
+                class="h-4 w-4 text-gray-500"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="#d3cdcd"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <polyline points="3 7 12 13 21 7" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="Useful-links">
+            <h3 class="Useful-links__title">لینک های مفید</h3>
+            <span class="Useful-links__border"></span>
+            <div class="Useful-links__wrapper">
+              <ul class="Useful-links__first">
+                <li class="Useful-links__links">
+                  <a href="#" class="Useful-links__link">خانه</a>
+                </li>
+                <li class="Useful-links__links">
+                  <a href="#Products" class="Useful-links__link">سفارش</a>
+                </li>
+                <li class="Useful-links__links">
+                  <a href="#Comments" class="Useful-links__link"
+                    >نظرات مشتری ها</a
+                  >
+                </li>
+                <li class="Useful-links__links">
+                  <a href="#connections" class="Useful-links__link"
+                    >تماس باما</a
+                  >
+                </li>
+              </ul>
+              <ul class="Useful-links__secend">
+                <li class="Useful-links__links">
+                  <a href="#" class="Useful-links__link">پرسش های متداول</a>
+                </li>
+                <li class="Useful-links__links">
+                  <a href="#" class="Useful-links__link">ثبت شکایت</a>
+                </li>
+                <li class="Useful-links__links">
+                  <a href="#" class="Useful-links__link">وبلاگ</a>
+                </li>
+                <li class="Useful-links__links">
+                  <a href="#" class="Useful-links__link">فرصت های شغلی</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="Stories">
+            <h3 class="Stories__title">اخرین پست های اینستاگرام</h3>
+            <span class="Stories__border"></span>
+            <div class="Stories__wrapper">
+              <img class="Stories__img" src="/images/post1.jpg" alt="" />
+              <img class="Stories__img" src="/images/post2.jpg" alt="" />
+              <img class="Stories__img" src="/images/post3.jpg" alt="" />
+              <img class="Stories__img" src="/images/post4.jpg" alt="" />
+              <img class="Stories__img" src="/images/post5.jpg" alt="" />
+              <img class="Stories__img" src="/images/post6.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="copy-right">
+        کلیه حقوق مادی و معنوی این سایت متعلق به برگرلند می باشد
+      </p>
+    </footer>
+
+    <script src="/script/app.js"></script>
+  </body>
+</html>
